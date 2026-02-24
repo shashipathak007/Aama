@@ -5,15 +5,15 @@ import TrackerPage from "./components/TrackerPage";
 import HealthPage from "./components/HealthPage";
 import MyBabyPage from "./components/MyBabyPage";
 import SupportPage from "./components/SupportPage";
-import  CommunityPage  from "./components/CommunityPage";
+import CommunityPage from "./components/CommunityPage";
 import LearnPage from "./components/LearnPage";
-import  PartnerPage  from "./components/PartnerPage";
-import  ResourcesPage  from "./components/ResourcesPage";
-
+import PartnerPage from "./components/PartnerPage";
+import ResourcesPage from "./components/ResourcesPage";
+import PrenatalTestsPage from "./components/PrenatalTestsPage";
 
 const WEEK = 10;
 
-export default function App() {
+function App() {
   return (
     <BrowserRouter>
       <Layout>
@@ -28,8 +28,11 @@ export default function App() {
           <Route path="/learn"     element={<LearnPage />} />
           <Route path="/partner"   element={<PartnerPage />} />
           <Route path="/resources" element={<ResourcesPage />} />
+          <Route path="/tests"     element={<PrenatalTestsPage />} />
         </Routes>
       </Layout>
     </BrowserRouter>
   );
 }
+
+export default App;

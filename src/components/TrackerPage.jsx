@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const weekData = {
-10: { baby: "Prune", size: "1.2 in", weight: "0.14 oz", babyChanges: "All vital organs formed. Tiny fingernails growing.", momChanges: "Morning sickness may peak. Round ligament pain possible.", fruit: "🍑" },
+10: { baby: "Strawberry", size: "1.2 in", weight: "0.14 oz", babyChanges: "All vital organs formed. Tiny fingernails growing.", momChanges: "Morning sickness may peak. Round ligament pain possible.", fruit: "🍓" },
 12: { baby: "Lime", size: "2.1 in", weight: "0.49 oz", babyChanges: "Baby can open and close fingers. Reflexes developing.", momChanges: "Energy levels improving. Nausea easing for many.", fruit: "🍋" },
 16: { baby: "Avocado", size: "4.6 in", weight: "3.5 oz", babyChanges: "Baby can hear your voice. Eyes making small movements.", momChanges: "Baby bump visible. Back aches may start.", fruit: "🥑" },
 20: { baby: "Banana", size: "6.5 in", weight: "10.6 oz", babyChanges: "Swallowing amniotic fluid. Hair growing on head.", momChanges: "Halfway there! You may feel first kicks.", fruit: "🍌" },
@@ -14,9 +14,9 @@ const weekData = {
 };
 
 const trimesterGuide = [
-{ name: "First Trimester", weeks: "1–12", desc: "Major organs form. Morning sickness common. Avoid alcohol, caffeine.", color: "bg-pink-100 text-pink-700 border-pink-200" },
-{ name: "Second Trimester", weeks: "13–26", desc: "Baby's movements felt. Energy returns. Anatomy scan done.", color: "bg-purple-100 text-purple-700 border-purple-200" },
-{ name: "Third Trimester", weeks: "27–40", desc: "Rapid growth. Prepare for birth. Watch for contractions.", color: "bg-rose-100 text-rose-700 border-rose-200" },
+{ name: "First Trimester", weeks: "1 to 12", desc: "Major organs form. Morning sickness common. Avoid alcohol, caffeine.", color: "bg-pink-100 text-pink-700 border-pink-200" },
+{ name: "Second Trimester", weeks: "13 to 26", desc: "Baby's movements felt. Energy returns. Anatomy scan done.", color: "bg-purple-100 text-purple-700 border-purple-200" },
+{ name: "Third Trimester", weeks: "27 to 40", desc: "Rapid growth. Prepare for birth. Watch for contractions.", color: "bg-rose-100 text-rose-700 border-rose-200" },
 ];
 
 export default function TrackerPage({ week = 24 }) {
@@ -42,6 +42,7 @@ const physicalChanges = [
 
 return (
 <div className="max-w-4xl mx-auto space-y-5">
+    
 {/* Progress */}
 <div className="bg-white/70 rounded-2xl p-5 border border-pink-100">
 <div className="flex items-start justify-between mb-4">
@@ -64,10 +65,11 @@ style={{ width: `${progress}%` }}
 </div>
 </div>
 
+
 {/* Emotional & Physical Changes */}
 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 <div className="bg-white/70 rounded-2xl p-5 border border-pink-100">
-<h2 className="font-semibold text-gray-800 mb-3">💜 Emotional Changes</h2>
+<h2 className="font-semibold text-gray-800 mb-3"> Emotional Changes</h2>
 <ul className="space-y-2">
 {emotionalChanges.map((c, i) => (
 <li key={i} className="text-sm text-gray-600 flex items-start gap-2">
@@ -78,7 +80,7 @@ style={{ width: `${progress}%` }}
 </ul>
 </div>
 <div className="bg-white/70 rounded-2xl p-5 border border-pink-100">
-<h2 className="font-semibold text-gray-800 mb-3">🌸 Physical Changes</h2>
+<h2 className="font-semibold text-gray-800 mb-3"> Physical Changes</h2>
 <ul className="space-y-2">
 {physicalChanges.map((c, i) => (
 <li key={i} className="text-sm text-gray-600 flex items-start gap-2">
@@ -89,6 +91,7 @@ style={{ width: `${progress}%` }}
 </ul>
 </div>
 </div>
+
 
 {/* Explore Your Weeks */}
 <div className="bg-white/70 rounded-2xl p-5 border border-pink-100">
@@ -118,6 +121,7 @@ style={{ width: `${progress}%` }}
 </div>
 </div>
 </div>
+
 
 {/* Trimester Guide */}
 <div className="bg-white/70 rounded-2xl p-5 border border-pink-100">

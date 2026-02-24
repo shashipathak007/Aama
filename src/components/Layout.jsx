@@ -2,8 +2,9 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import {
   Home, Activity, Heart, Baby, Smile, Users,
-  BookOpen, UserCheck, Package, Menu, X
+  BookOpen, UserCheck, Package, Menu, X, FlaskConical
 } from "lucide-react";
+import logo from "../assets/logo.svg";
 
 const navItems = [
   { path: "/today",     label: "Today",     icon: Home },
@@ -15,6 +16,7 @@ const navItems = [
   { path: "/learn",     label: "Learn",     icon: BookOpen },
   { path: "/partner",   label: "Partner",   icon: UserCheck },
   { path: "/resources", label: "Resources", icon: Package },
+  { path: "/tests",     label: "Tests",     icon: FlaskConical },
 ];
 
 export default function Layout({ children }) {
@@ -30,13 +32,13 @@ export default function Layout({ children }) {
           </button>
 
           {/* Clickable Logo */}
-         <NavLink to="/today" className="flex items-center gap-2">
-  <img src="/src/assets/logo.svg" className="w-8 h-8 rounded-full object-cover" />
-  <div>
-    <span className="font-bold text-gray-800 text-lg" style={{ fontFamily: "'Georgia', serif" }}>Aama</span>
-    <p className="text-xs text-pink-400 leading-none">Your pregnancy companion</p>
-  </div>
-           </NavLink>
+          <NavLink to="/today" className="flex items-center gap-2">
+            <img src={logo} alt="Aama" className="w-8 h-8" />
+            <div>
+              <span className="font-bold text-gray-800 text-lg" style={{ fontFamily: "'Georgia', serif" }}>Aama</span>
+              <p className="text-xs text-pink-400 leading-none">Your pregnancy companion</p>
+            </div>
+          </NavLink>
         </div>
       </header>
 

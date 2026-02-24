@@ -110,6 +110,7 @@ export default function SupportPage() {
             Start Breathing Exercise
           </button>
         )}
+        
       </div>
 
       {/* Meditation */}
